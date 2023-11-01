@@ -8,7 +8,7 @@
 .thirdColumn {
   width: 25.194rem;
   height: 47.164rem;
-
+  margin: 0.5rem;
   flex-shrink: 0;
 }
 
@@ -16,10 +16,8 @@
   background-color: #000000;
   min-height: 100vh;
   width: 100vw;
-
   display: flex;
   flex-direction: row;
-  column-gap: 1.5rem;
   justify-content: center;
   align-items: center;
 }
@@ -32,7 +30,6 @@
   border-radius: 18.789px;
   background: #1b1b1b;
   margin: 0.5rem;
-  margin-left: 0;
 }
 
 .box11 {
@@ -48,9 +45,10 @@
 }
 
 .box13 {
-  width: 15.512rem;
+  width: 15rem;
   height: 20.5rem;
   flex-shrink: 0;
+  margin-left: 0;
 }
 
 .fcSection1 {
@@ -102,17 +100,17 @@
   border-radius: 18.789px;
   background: #1b1b1b;
   margin: 0.5rem;
-  margin-left: 0;
+
 }
 
 .box21 {
-  width: 24.874rem;
+  width: 25rem;
   height: 10rem;
   flex-shrink: 0;
 }
 
 .box22 {
-  width: 24.874rem;
+  width: 25rem;
   height: 20rem;
   flex-shrink: 0;
 }
@@ -122,6 +120,7 @@
   width: 12.322rem;
   height: 10rem;
   flex-shrink: 0;
+
 }
 
 .box24 {
@@ -129,9 +128,77 @@
   width: 12.324rem;
   height: 10rem;
   flex-shrink: 0;
+  margin: 0;
 }
 
 .scSection2 {
   display: flex;
   flex-direction: row;
+}
+
+/* fcSection3 */
+
+.box31,
+.box32,
+.box33,
+.box34,
+.box35 {
+  border-radius: 18.789px;
+  background: #1b1b1b;
+  margin: 0.5rem;
+  margin-left: 0;
+}
+
+.box31 {
+  width: 10.616rem;
+  height: 20rem;
+  flex-shrink: 0;
+}
+
+.box32 {
+  width: 14.503rem;
+  height: 20rem;
+  flex-shrink: 0;
+}
+
+.tcSection1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.box33 {
+  margin-top: 0;
+  width: 14.361rem;
+  height: 20.5rem;
+  flex-shrink: 0;
+}
+
+.box34 {
+  margin-top: 0;
+  width: 10.745rem;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+.box35 {
+  margin-top: 0;
+  width: 10.708rem;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+.fcSection3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.tcSection2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.tcs1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

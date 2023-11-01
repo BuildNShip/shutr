@@ -32,6 +32,20 @@ const Home = () => {
           <div className={styles.box24}></div>
         </div>
       </div>
+      {/* Third Column */}
+      <div className={styles.thirdColumn}>
+        <div className={styles.tcSection1}>
+          <div className={styles.box31}></div>
+          <div className={styles.box32}></div>
+        </div>
+        <div className={styles.tcSection2}>
+          <div className={styles.box33}></div>
+          <div className={styles.tcs1}>
+            <div className={styles.box34}></div>
+            <div className={styles.box35}></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

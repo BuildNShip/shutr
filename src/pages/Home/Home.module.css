@@ -16,6 +16,12 @@
   background-color: #000000;
   min-height: 100vh;
   width: 100vw;
+
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .box11,
@@ -37,13 +43,13 @@
 
 .box12 {
   width: 10.225rem;
-  height: 10.501rem;
+  height: 10rem;
   flex-shrink: 0;
 }
 
 .box13 {
   width: 15.512rem;
-  height: 20.992rem;
+  height: 20.5rem;
   flex-shrink: 0;
 }
 
@@ -63,26 +69,69 @@
 }
 
 .box14 {
-    width: 14.205rem;
-    height: 10rem;
-    margin-top: 0;
-    flex-shrink: 0;
+  width: 14.205rem;
+  height: 10rem;
+  margin-top: 0;
+  flex-shrink: 0;
 }
 
 .box15 {
-    width: 14.205rem;
-    height: 10rem;
-    flex-shrink: 0;
+  width: 14.205rem;
+  height: 10rem;
+  flex-shrink: 0;
 }
 
 .box16 {
-    width: 11.5rem;
-    height: 20.5rem;
-    margin-top: 0;
-    flex-shrink: 0;
+  width: 11.5rem;
+  height: 20.5rem;
+  margin-top: 0;
+  flex-shrink: 0;
 }
 
 .fcSection2 {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Second Column */
+
+.box21,
+.box22,
+.box23,
+.box24 {
+  border-radius: 18.789px;
+  background: #1b1b1b;
+  margin: 0.5rem;
+  margin-left: 0;
+}
+
+.box21 {
+  width: 24.874rem;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+.box22 {
+  width: 24.874rem;
+  height: 20rem;
+  flex-shrink: 0;
+}
+
+.box23 {
+  margin-top: 0;
+  width: 12.322rem;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+.box24 {
+  margin-top: 0;
+  width: 12.324rem;
+  height: 10rem;
+  flex-shrink: 0;
+}
+
+.scSection2 {
   display: flex;
   flex-direction: row;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Home.module.css";
 import { useState, useEffect } from "react";
 import { BsFillCloudUploadFill } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa";
 import exifr from "exifr";
 import logo from "./logo.png";
 
@@ -84,9 +85,8 @@ const Home = () => {
               <p className={styles.b11M}>{exifData && exifData.Model}</p>
             </div>
             <div className={styles.box12}>
-              {exifData && exifData.Software && (
-                <p className={styles.b12T}>SOFTWARE</p>
-              )}
+              <p className={styles.b12T}>SOFTWARE</p>
+
               <p className={styles.software}>{exifData && exifData.Software}</p>
             </div>
           </div>
@@ -116,7 +116,11 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className={styles.box16}></div>
+          <div className={styles.box16}>
+            <div className={styles.socials}>
+              <FaInstagram color="#6751D7" size={75} />
+            </div>
+          </div>
         </div>
       </div>
       {/* Second Column */}

@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import { useState, useEffect } from "react";
 import { BsFillCloudUploadFill } from "react-icons/bs";
 import exifr from "exifr";
+import logo from "./logo.png";
 
 const Home = () => {
   const [file, setFile] = useState(null);
@@ -89,7 +90,16 @@ const Home = () => {
               <p className={styles.software}>{exifData && exifData.Software}</p>
             </div>
           </div>
-          <div className={styles.box13}></div>
+          <div className={styles.box13}>
+            <div className={styles.b131}>
+              <p className={styles.b131T}>XResolution</p>
+              <p className={styles.b131C}>{exifData && exifData.XResolution}</p>
+            </div>
+            <div className={styles.b131}>
+              <p className={styles.b131T}>YResolution</p>
+              <p className={styles.b131C}>{exifData && exifData.YResolution}</p>
+            </div>
+          </div>
         </div>
         <div className={styles.fcSection2}>
           <div className={styles.fcs2}>
@@ -137,14 +147,24 @@ const Home = () => {
             <p className={styles.b23T}>Orientation</p>
             <p className={styles.b23C}>{exifData && exifData.Orientation}</p>
           </div>
-          <div className={styles.box24}></div>
+          <div className={styles.box24}>
+            <img className={styles.box24i} src={logo} alt="" />
+          </div>
         </div>
       </div>
       {/* Third Column */}
       <div className={styles.thirdColumn}>
         <div className={styles.tcSection1}>
-          <div className={styles.box31}></div>
-          <div className={styles.box32}></div>
+          <div className={styles.box31}>
+            <p className={styles.b31T}>Aperture Value</p>
+            <p className={styles.b31C}>
+              {exifData && exifData.MaxApertureValue}
+            </p>
+          </div>
+          <div className={styles.box32}>
+            <p className={styles.b32T}>Focal Length</p>
+            <p className={styles.b32C}>{exifData && exifData.FocalLength}</p>
+          </div>
         </div>
         <div className={styles.tcSection2}>
           <div className={styles.box33}>

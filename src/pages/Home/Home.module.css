@@ -25,7 +25,12 @@
 
   background-color: #000000;
   opacity: 1;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 18px ), repeating-linear-gradient( #09090955, #090909 );
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #000000 18px
+    ),
+    repeating-linear-gradient(#09090955, #090909);
 }
 
 .box11,
@@ -234,7 +239,7 @@
 }
 
 .boxText {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   font-weight: 600;
@@ -250,7 +255,7 @@
 }
 
 .fileName {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 0.9em;
   font-weight: 500;
@@ -259,7 +264,7 @@
 }
 
 .b11T {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
@@ -277,7 +282,7 @@
 }
 
 .b11M {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 1.45rem;
   font-weight: 400;
@@ -286,7 +291,7 @@
 }
 
 .software {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 1.35rem;
   font-weight: 400;
@@ -296,7 +301,7 @@
 }
 
 .b12T {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
@@ -314,7 +319,7 @@
 }
 
 .b14C {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
   max-width: 9rem;
@@ -324,7 +329,7 @@
 }
 
 .b14T {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 1.35rem;
   font-weight: 500;
@@ -342,7 +347,7 @@
 }
 
 .b21T {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 2.25rem;
   font-weight: 500;
@@ -373,7 +378,7 @@
 }
 
 .b331T {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 1.35rem;
   font-weight: 500;
@@ -391,7 +396,7 @@
 }
 
 .b331C {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
@@ -400,7 +405,7 @@
 }
 
 .b34C {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
@@ -409,7 +414,7 @@
 }
 
 .b35T {
-  color: #ffffff;
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
   font-weight: 500;
@@ -436,7 +441,37 @@
 }
 
 .b23T {
-  color: #ffffff;
+  color: #bbbbbb;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  max-width: 15rem;
+  text-align: center;
+  background: rgb(103, 81, 215);
+  background: linear-gradient(
+    90deg,
+    rgb(122, 103, 212) 35%,
+    rgb(132, 61, 238) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.b23C {
+  color: #bbbbbb;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.b131 {
+  margin: 1rem;
+}
+
+.b131T {
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
@@ -453,11 +488,74 @@
   -webkit-background-clip: text;
 }
 
-.b23C {
-  color: #ffffff;
+.b131C {
+  color: #bbbbbb;
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 2.5rem;
+  line-height: 1.75rem;
   font-weight: 500;
-  line-height: 1.25rem;
+  text-align: center;
+}
+
+.box24i {
+  width: 8rem;
+}
+
+.b32T {
+  color: #bbbbbb;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.75rem;
+  margin-bottom: 0.75rem;
+  max-width: 15rem;
+  text-align: center;
+
+  background: rgb(103, 81, 215);
+  background: linear-gradient(
+    90deg,
+    rgb(122, 103, 212) 35%,
+    rgb(132, 61, 238) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.b32C {
+  color: #bbbbbb;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.75rem;
+  line-height: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.b31T {
+  color: #bbbbbb;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  margin-bottom: 0.75rem;
+  max-width: 15rem;
+  text-align: center;
+
+  background: rgb(103, 81, 215);
+  background: linear-gradient(
+    90deg,
+    rgb(122, 103, 212) 35%,
+    rgb(132, 61, 238) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.b31C {
+  color: #bbbbbb;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  margin-top: -1rem;
+  line-height: 2rem;
+  font-weight: 500;
   text-align: center;
 }

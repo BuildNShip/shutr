@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Home.module.css";
 import { useState, useEffect } from "react";
 import { BsFillCloudUploadFill } from "react-icons/bs";
@@ -74,6 +74,12 @@ const Home = () => {
     }
   }
 
+  const box22Ref = useRef(null);
+
+  useEffect(() => {
+    box22Ref.current.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
     <div className={styles.mainContainer}>
       {/* First Column */}
@@ -145,7 +151,7 @@ const Home = () => {
             )}
             <p className={styles.b21C}>{exifData && exifData.LensModel}</p>
           </div>
-          <div className={styles.box22}>
+          <div className={styles.box22} ref={box22Ref}>
             <label htmlFor="upload">
               <BsFillCloudUploadFill size={150} color="#6751d7" />
 

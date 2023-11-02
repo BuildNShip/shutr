@@ -85,18 +85,24 @@ const Home = () => {
               <p className={styles.b11M}>{exifData && exifData.Model}</p>
             </div>
             <div className={styles.box12}>
-              <p className={styles.b12T}>SOFTWARE</p>
+              {exifData && exifData.Software && (
+                <p className={styles.b12T}>SOFTWARE</p>
+              )}
 
               <p className={styles.software}>{exifData && exifData.Software}</p>
             </div>
           </div>
           <div className={styles.box13}>
             <div className={styles.b131}>
-              <p className={styles.b131T}>XResolution</p>
+              {exifData && exifData.XResolution && (
+                <p className={styles.b131T}>XResolution</p>
+              )}
               <p className={styles.b131C}>{exifData && exifData.XResolution}</p>
             </div>
             <div className={styles.b131}>
-              <p className={styles.b131T}>YResolution</p>
+              {exifData && exifData.YResolution && (
+                <p className={styles.b131T}>YResolution</p>
+              )}
               <p className={styles.b131C}>{exifData && exifData.YResolution}</p>
             </div>
           </div>
@@ -104,13 +110,17 @@ const Home = () => {
         <div className={styles.fcSection2}>
           <div className={styles.fcs2}>
             <div className={styles.box14}>
-              <p className={styles.b14T}>Created Date</p>
+              {exifData && exifData.CreateDate && (
+                <p className={styles.b14T}>Created Date</p>
+              )}
               <p className={styles.b14C}>
                 {exifData && formatDate(exifData.CreateDate)}
               </p>
             </div>
             <div className={styles.box15}>
-              <p className={styles.b14T}>Modified Date</p>
+              {exifData && exifData.CreateDate && (
+                <p className={styles.b14T}>Modified Date</p>
+              )}
               <p className={styles.b14C}>
                 {exifData && formatDate(exifData.ModifyDate)}
               </p>
@@ -118,7 +128,10 @@ const Home = () => {
           </div>
           <div className={styles.box16}>
             <div className={styles.socials}>
-              <FaInstagram color="#6751D7" size={75} />
+              {exifData && exifData.Orientation && (
+                <p className={styles.b23T}>Orientation</p>
+              )}
+              <p className={styles.b23C}>{exifData && exifData.Orientation}</p>
             </div>
           </div>
         </div>
@@ -127,7 +140,9 @@ const Home = () => {
       <div className={styles.secondColumn}>
         <div className={styles.scSection1}>
           <div className={styles.box21}>
-            <p className={styles.b21T}>Lens Model</p>
+            {exifData && exifData.LensModel && (
+              <p className={styles.b21T}>Lens Model</p>
+            )}
             <p className={styles.b21C}>{exifData && exifData.LensModel}</p>
           </div>
           <div className={styles.box22}>
@@ -148,8 +163,7 @@ const Home = () => {
         </div>
         <div className={styles.scSection2}>
           <div className={styles.box23}>
-            <p className={styles.b23T}>Orientation</p>
-            <p className={styles.b23C}>{exifData && exifData.Orientation}</p>
+            <FaInstagram color="#6751D7" size={75} />
           </div>
           <div className={styles.box24}>
             <img className={styles.box24i} src={logo} alt="" />
@@ -160,34 +174,46 @@ const Home = () => {
       <div className={styles.thirdColumn}>
         <div className={styles.tcSection1}>
           <div className={styles.box31}>
-            <p className={styles.b31T}>Aperture Value</p>
+            {exifData && exifData.MaxApertureValue && (
+              <p className={styles.b31T}>Aperture Value</p>
+            )}
             <p className={styles.b31C}>
               {exifData && exifData.MaxApertureValue}
             </p>
           </div>
           <div className={styles.box32}>
-            <p className={styles.b32T}>Focal Length</p>
+            {exifData && exifData.FocalLength && (
+              <p className={styles.b32T}>Focal Length</p>
+            )}
             <p className={styles.b32C}>{exifData && exifData.FocalLength}</p>
           </div>
         </div>
         <div className={styles.tcSection2}>
           <div className={styles.box33}>
             <div className={styles.b331}>
-              <p className={styles.b331T}>Brightness</p>
+              {exifData && exifData.BrightnessValue && (
+                <p className={styles.b331T}>Brightness</p>
+              )}
               <p className={styles.b331C}>
                 {exifData && exifData.BrightnessValue}
               </p>
             </div>
             <div className={styles.b331}>
-              <p className={styles.b331T}>Contrast</p>
+              {exifData && exifData.Contrast && (
+                <p className={styles.b331T}>Contrast</p>
+              )}
               <p className={styles.b331C}>{exifData && exifData.Contrast}</p>
             </div>
             <div className={styles.b331}>
-              <p className={styles.b331T}>Saturation</p>
+              {exifData && exifData.Saturation && (
+                <p className={styles.b331T}>Saturation</p>
+              )}
               <p className={styles.b331C}>{exifData && exifData.Saturation}</p>
             </div>
             <div className={styles.b331}>
-              <p className={styles.b331T}>Sharpness </p>
+              {exifData && exifData.Sharpness && (
+                <p className={styles.b331T}>Sharpness </p>
+              )}
               <p className={styles.b331C}>{exifData && exifData.Sharpness}</p>
             </div>
           </div>
@@ -196,7 +222,7 @@ const Home = () => {
               <p className={styles.b34C}>{exifData && exifData.Flash}</p>
             </div>
             <div className={styles.box35}>
-              <p className={styles.b35T}>ISO</p>
+              {exifData && exifData.ISO && <p className={styles.b35T}>ISO</p>}
               <p className={styles.b35C}>{exifData && exifData.ISO}</p>
             </div>
           </div>

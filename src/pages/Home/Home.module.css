@@ -46,7 +46,7 @@
 .box14,
 .box15 {
   border-radius: 18.789px;
-  background: #0f0f0f;
+  background: #1d1d1d;
   margin: 0.25rem;
   margin-bottom: 0;
 
@@ -89,7 +89,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #0f0f0f;
+  background: #1d1d1d;
 }
 
 .box14 {
@@ -123,7 +123,7 @@
 .box24 {
   border-radius: 18.789px;
   margin: 0.25rem;
-  background: #0f0f0f;
+  background: #1d1d1d;
 
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@
 .box34,
 .box35 {
   border-radius: 18.789px;
-  background: #0f0f0f;
+  background: #1d1d1d;
   margin: 0.25rem;
 
   display: flex;
@@ -277,7 +277,7 @@
   font-weight: 500;
   max-width: 15rem;
   text-align: center;
-
+  margin: 0.5rem;
   background: rgb(103, 81, 215);
   background: linear-gradient(
     90deg,
@@ -289,6 +289,7 @@
 }
 
 .b11M {
+  margin: 0.5rem;
   color: #bbbbbb;
   font-family: "Poppins", sans-serif;
   font-size: 1.45rem;

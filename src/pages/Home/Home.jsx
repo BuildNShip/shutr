@@ -162,9 +162,15 @@ const Home = () => {
           </div>
         </div>
         <div className={styles.scSection2}>
-          <div className={styles.box23}>
-            <FaInstagram color="#6751D7" size={75} />
-          </div>
+          <a
+            href="https://www.instagram.com/buildnship/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={styles.box23}>
+              <FaInstagram color="#6751D7" size={75} />
+            </div>
+          </a>
           <div className={styles.box24}>
             <img className={styles.box24i} src={logo} alt="" />
           </div>

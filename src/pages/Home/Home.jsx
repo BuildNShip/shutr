@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
 import { useState, useEffect } from "react";
+import { BsFillCloudUploadFill } from "react-icons/bs";
 import exifr from "exifr";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
 
   const handleFileChange = async (event) => {
     const selectedFile = event.target.files[0];
+    console.log("Selected File:", selectedFile);
     if (!selectedFile) {
       return;
     }
@@ -24,21 +26,73 @@ const Home = () => {
       console.error("Error reading EXIF:", err);
     }
   };
+
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const monthNames = [
+      "January", "February", "March",
+      "April", "May", "June", "July",
+      "August", "September", "October",
+      "November", "December"
+    ];
+    const dayNames = [
+      "Sun", "Mon", "Tue",
+      "Wed", "Thu", "Fri", "Sat"
+    ];
+    const day = dayNames[date.getDay()];
+    const month = monthNames[date.getMonth()];
+    const dayOfMonth = date.getDate();
+    const suffix = getSuffix(dayOfMonth);
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const formattedHours = hours % 12 || 12;
+    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+    return `${month} ${dayOfMonth}${suffix}, ${day} ${formattedHours}:${formattedMinutes} ${ampm}`;
+  }
+
+  function getSuffix(dayOfMonth) {
+    if (dayOfMonth >= 11 && dayOfMonth <= 13) {
+      return "th";
+    }
+    switch (dayOfMonth % 10) {
+      case 1:  return "st";
+      case 2:  return "nd";
+      case 3:  return "rd";
+      default: return "th";
+    }
+  }
+
   return (
     <div className={styles.mainContainer}>
       {/* First Column */}
       <div className={styles.firstColumn}>
         <div className={styles.fcSection1}>
           <div className={styles.fcs1}>
-            <div className={styles.box11}></div>
-            <div className={styles.box12}></div>
+            <div className={styles.box11}>
+              <p className={styles.b11T}>{exifData && exifData.Make}</p>
+              <p className={styles.b11M}>{exifData && exifData.Model}</p>
+            </div>
+            <div className={styles.box12}>
+              {exifData && exifData.Software && (
+                <p className={styles.b12T}>SOFTWARE</p>
+              )}
+              <p className={styles.software}>{exifData && exifData.Software}</p>
+            </div>
           </div>
           <div className={styles.box13}></div>
         </div>
         <div className={styles.fcSection2}>
           <div className={styles.fcs2}>
-            <div className={styles.box14}></div>
-            <div className={styles.box15}></div>
+            <div className={styles.box14}>
+              <p className={styles.b14T}>Created Date</p>
+              <p className={styles.b14C}>{exifData && formatDate(exifData.CreateDate)}</p>
+            </div>
+            <div className={styles.box15}>
+              <p className={styles.b14T}>Modified Date</p>
+              <p className={styles.b14C}>{exifData && formatDate(exifData.ModifyDate)}</p>
+            </div>
           </div>
           <div className={styles.box16}></div>
         </div>
@@ -46,11 +100,23 @@ const Home = () => {
       {/* Second Column */}
       <div className={styles.secondColumn}>
         <div className={styles.scSection1}>
-          <div className={styles.box21}></div>
+          <div className={styles.box21}>
+            <p className={styles.b21T}>Lens Model</p>
+            <p className={styles.b21C}>{exifData && exifData.LensModel}</p>
+          </div>
           <div className={styles.box22}>
-            {" "}
-            <input type="file" id="upload" onChange={handleFileChange} />
-            {exifData && <pre>{JSON.stringify(exifData, null, 2)}</pre>}
+            <label htmlFor="upload">
+              <BsFillCloudUploadFill size={150} color="#6751d7" />
+            </label>
+            <input
+              type="file"
+              id="upload"
+              onChange={handleFileChange}
+              style={{ display: "none" }}
+            />
+            <p className={styles.boxText}>Upload File</p>
+            {file && <p className={styles.fileName}>{file.name}</p>}
+            {/* {exifData && <pre>{JSON.stringify(exifData, null, 2)}</pre>} */}
           </div>
         </div>
         <div className={styles.scSection2}>

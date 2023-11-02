@@ -27,28 +27,32 @@ const Home = () => {
     }
   };
 
-
   function formatDate(dateString) {
     const date = new Date(dateString);
     const monthNames = [
-      "January", "February", "March",
-      "April", "May", "June", "July",
-      "August", "September", "October",
-      "November", "December"
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
     ];
-    const dayNames = [
-      "Sun", "Mon", "Tue",
-      "Wed", "Thu", "Fri", "Sat"
-    ];
+    const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const day = dayNames[date.getDay()];
     const month = monthNames[date.getMonth()];
     const dayOfMonth = date.getDate();
     const suffix = getSuffix(dayOfMonth);
     const hours = date.getHours();
     const minutes = date.getMinutes();
-    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const ampm = hours >= 12 ? "PM" : "AM";
     const formattedHours = hours % 12 || 12;
-    const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+    const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
     return `${month} ${dayOfMonth}${suffix}, ${day} ${formattedHours}:${formattedMinutes} ${ampm}`;
   }
 
@@ -57,10 +61,14 @@ const Home = () => {
       return "th";
     }
     switch (dayOfMonth % 10) {
-      case 1:  return "st";
-      case 2:  return "nd";
-      case 3:  return "rd";
-      default: return "th";
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
     }
   }
 
@@ -87,11 +95,15 @@ const Home = () => {
           <div className={styles.fcs2}>
             <div className={styles.box14}>
               <p className={styles.b14T}>Created Date</p>
-              <p className={styles.b14C}>{exifData && formatDate(exifData.CreateDate)}</p>
+              <p className={styles.b14C}>
+                {exifData && formatDate(exifData.CreateDate)}
+              </p>
             </div>
             <div className={styles.box15}>
               <p className={styles.b14T}>Modified Date</p>
-              <p className={styles.b14C}>{exifData && formatDate(exifData.ModifyDate)}</p>
+              <p className={styles.b14C}>
+                {exifData && formatDate(exifData.ModifyDate)}
+              </p>
             </div>
           </div>
           <div className={styles.box16}></div>
@@ -107,20 +119,24 @@ const Home = () => {
           <div className={styles.box22}>
             <label htmlFor="upload">
               <BsFillCloudUploadFill size={150} color="#6751d7" />
+
+              <input
+                type="file"
+                id="upload"
+                onChange={handleFileChange}
+                style={{ display: "none" }}
+              />
+              <p className={styles.boxText}>Upload File</p>
             </label>
-            <input
-              type="file"
-              id="upload"
-              onChange={handleFileChange}
-              style={{ display: "none" }}
-            />
-            <p className={styles.boxText}>Upload File</p>
             {file && <p className={styles.fileName}>{file.name}</p>}
             {/* {exifData && <pre>{JSON.stringify(exifData, null, 2)}</pre>} */}
           </div>
         </div>
         <div className={styles.scSection2}>
-          <div className={styles.box23}></div>
+          <div className={styles.box23}>
+            <p className={styles.b23T}>Orientation</p>
+            <p className={styles.b23C}>{exifData && exifData.Orientation}</p>
+          </div>
           <div className={styles.box24}></div>
         </div>
       </div>
@@ -131,10 +147,34 @@ const Home = () => {
           <div className={styles.box32}></div>
         </div>
         <div className={styles.tcSection2}>
-          <div className={styles.box33}></div>
+          <div className={styles.box33}>
+            <div className={styles.b331}>
+              <p className={styles.b331T}>Brightness</p>
+              <p className={styles.b331C}>
+                {exifData && exifData.BrightnessValue}
+              </p>
+            </div>
+            <div className={styles.b331}>
+              <p className={styles.b331T}>Contrast</p>
+              <p className={styles.b331C}>{exifData && exifData.Contrast}</p>
+            </div>
+            <div className={styles.b331}>
+              <p className={styles.b331T}>Saturation</p>
+              <p className={styles.b331C}>{exifData && exifData.Saturation}</p>
+            </div>
+            <div className={styles.b331}>
+              <p className={styles.b331T}>Sharpness </p>
+              <p className={styles.b331C}>{exifData && exifData.Sharpness}</p>
+            </div>
+          </div>
           <div className={styles.tcs1}>
-            <div className={styles.box34}></div>
-            <div className={styles.box35}></div>
+            <div className={styles.box34}>
+              <p className={styles.b34C}>{exifData && exifData.Flash}</p>
+            </div>
+            <div className={styles.box35}>
+              <p className={styles.b35T}>ISO</p>
+              <p className={styles.b35C}>{exifData && exifData.ISO}</p>
+            </div>
           </div>
         </div>
       </div>

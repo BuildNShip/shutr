@@ -5,6 +5,7 @@ import { BsFillCloudUploadFill } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import exifr from "exifr";
 import logo from "./logo.png";
+import toast from "react-hot-toast";
 
 const Home = () => {
   const [file, setFile] = useState(null);
@@ -21,6 +22,10 @@ const Home = () => {
     setFile(selectedFile);
     try {
       const exif = await exifr.parse(selectedFile);
+      if (!exif) {
+        toast.error("No EXIF data found in the image");
+        return;
+      }
       setExifData(exif);
       console.log("EXIF Data:", exif);
     } catch (err) {
@@ -146,12 +151,19 @@ const Home = () => {
       <div className={styles.secondColumn}>
         <div className={styles.scSection1}>
           <div className={styles.box21}>
+            {!exifData && (
+              <p className={styles.b211C} ref={box22Ref}>
+                Kindly, click the below icon to upload an image, so as to view
+                the metadata. Photos taken on DSLR cameras are recommended for
+                best results
+              </p>
+            )}
             {exifData && exifData.LensModel && (
               <p className={styles.b21T}>Lens Model</p>
             )}
             <p className={styles.b21C}>{exifData && exifData.LensModel}</p>
           </div>
-          <div className={styles.box22} ref={box22Ref}>
+          <div className={styles.box22} >
             <label htmlFor="upload">
               <BsFillCloudUploadFill size={150} color="#6751d7" />
 
